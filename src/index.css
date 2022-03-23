@@ -15,4 +15,131 @@ code {
 .user-container{
   border: 1px solid black;
   margin: 1rem;
+  text-align: left;
+  padding: 0rem 2rem;
+}
+.user-container span{
+  color: rgb(148, 148, 148);
+}
+.user-container div{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal{
+  position: fixed;
+  z-index:999;
+  top:0;
+  left:0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.is-open{
+  display: flex;
+}
+
+.form-container{
+  position: relative;
+  background-color: #fff;
+  min-width: 320px;
+  max-width: 480px;
+  min-height: 600px;
+  max-width: 800px;
+  overflow-y: auto;
+}
+.form-container h1{
+  text-align: left;
+  margin: 3rem 1.5rem .5rem 1.5rem;
+}
+.input-container{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 1rem;
+}
+.input-container input {
+  margin-top: .5rem;
+  padding: .5rem;
+  border: 1px rgb(171, 167, 167) solid;
+}
+.input-container:nth-child(7){
+  margin-bottom: 3rem;
+}
+
+.delete-container{
+  position: relative;
+  background-color: #fff;
+  width: 300px;
+  height: 170px;
+}
+
+.modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  color: black;
+}
+
+button{
+  border:  none;
+  background-color: #555A88;
+  padding: .5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-right: .5rem;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+.header button{
+  margin-top: 1rem;
+  height: 2.5rem;
+  margin-bottom: 0rem;
+}
+
+.UserList{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.space{
+  height: 0px;
+  max-width: 500px;
+  border: 1px gray solid;
+  background-color: gray;
+  margin-bottom: 1rem;
+}
+
+.update-button {
+  background-color: rgb(18, 118, 78);
+}
+.delete-button {
+  background-color: rgb(135, 27, 27);
+}
+
+@media screen and (max-width: 950px) {
+  .UserList{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .header{
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .UserList{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header{
+    padding: 1rem 1rem;
+  }
 }

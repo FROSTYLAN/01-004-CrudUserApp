@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
- const UserForm = ({getUsers, userSelected, selectUser}) => {
+ const UserForm = ({getUsers, userSelected, selectUser, setIsOpen}) => {
 
     const [ firstName, setFirstName ] = useState("");
     const [ lastName, setLastName ] = useState("");
@@ -56,6 +56,8 @@ import React, { useEffect, useState } from "react";
 
     return(
         <form className="form-container" onSubmit={submit}>
+            <button onClick={() => setIsOpen(false)} className="modal-close">x</button>
+            {userSelected ? <h1>Edit Users</h1> : <h1>Add users</h1>}
             <div className="input-container">
                 <label htmlFor="firstName">Fisrt Name</label>
                 <input 
@@ -100,7 +102,7 @@ import React, { useEffect, useState } from "react";
                     value={birthday}
                 />
             </div>
-            <button>Submit</button>
+            <button onClick={() => setIsOpen(false)}>Submit</button>
             {userSelected &&
                 <button onClick={() => selectUser(null)}>Cancel</button>
             }
