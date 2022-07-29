@@ -1,6 +1,6 @@
 # 01-004-CrudUserApp
 
-Miniapp consumiendo un crud de usuarios.
+Miniapp consumiendo un crud de usuarios | Modales con CSS.
 
 - Live Site URL: https://01-004-crud-user.netlify.app/
 
